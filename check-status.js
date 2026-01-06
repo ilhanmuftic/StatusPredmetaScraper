@@ -82,7 +82,7 @@ async function checkCSV() {
         for (let i = 0; i < rows.length; i++) {
             // Try different possible column names for the ID
             const row = rows[i];
-            const possibleId = row[''] || row['a/a'] || row['216390'] || row[Object.keys(row)[0]];
+            const possibleId = row[''] || row['a/a'] || row['216390'] || row[Object.keys(row)[0]] || row['broj protokola'];
 
             if (possibleId && possibleId.trim() === TARGET_ID) {
                 targetRow = row;
